@@ -1,3 +1,8 @@
+News, September 10
+==================
+
+A new directory "thread_intro" has been included. 
+
 Tutorial of Rapid Provisioning Tools
 ====================================
 Introduction

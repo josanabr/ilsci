@@ -5,6 +5,14 @@ In chapter one of the book "Principles of Parallel Programming", a trivial examp
 
 In this directory you find different C programs to present the code that should help you on understanding the section "Parallelism Using Multiple Instruction Streams" in the aforementioned chapter. As follows a description of every program is given.
 
+## Important Note
+
+To compile all programs in this directory run
+
+> make clean && make all
+
+**Note:** It is very important to read chapter one of "Principles of Parallel Programming" before to continue with this reading.
+
 ## 3s-00.c
 
 This program presents a sequential solution of the problem stated in chapter one. The code has two principal parts:
@@ -73,10 +81,3 @@ This time this solution is correct and exhibits a better performance when it is 
 
 Implement the **Fourth Solution: Try 4** found in page 20 and compare the performance of your implementation with previous programs.
 
-## Big Note
-
-To compile all the programs run
-
-> make clean && make all
-
-**Note:** It is very important to read chapter one of "Principles of Parallel Programming" before to do this homework. 
