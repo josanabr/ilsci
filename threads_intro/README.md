@@ -13,6 +13,8 @@ To compile all programs in this directory run
 
 **Note:** It is very important to read chapter one of "Principles of Parallel Programming" before to continue with this reading.
 
+**Note:** These programs were run in a computer having 8 GB of RAM
+
 ## 3s-00.c
 
 This program presents a sequential solution of the problem stated in chapter one. The code has two principal parts:
