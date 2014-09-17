@@ -1,6 +1,7 @@
 # A gentle intro to Vagrant
 
 **Author** John A Sanabria
+
 **E-mail** john.sanabria@correounivalle.edu.co
 
 ## Preliminaries
@@ -9,11 +10,12 @@ To take full advantage of this document is highly recommended to get access a co
 In order to do this it is necessary install:
 
 - VirtualBox 
-..- [4.2.x 64 bits](http://172.17.9.50/VirtualBox-4.2.24-92790-Linux_amd64.run)
-..- [4.2.x 32 bits](http://172.17.9.50/VirtualBox-4.2.24-92790-Linux_x86.run)
+  - [4.2.x 64 bits](http://172.17.9.50/VirtualBox-4.2.24-92790-Linux_amd64.run)
+  - [4.2.x 32 bits](http://172.17.9.50/VirtualBox-4.2.24-92790-Linux_x86.run)
+
 - Vagrant 
-..- [1.6.x 64 bits](http://172.17.9.50/vagrant_1.6.5_x86_64.deb)
-..- [1.6.x 32 bits](http://172.17.9.50/vagrant_1.6.5_i686.deb)
+  - [1.6.x 64 bits](http://172.17.9.50/vagrant_1.6.5_x86_64.deb)
+  - [1.6.x 32 bits](http://172.17.9.50/vagrant_1.6.5_i686.deb)
 
 ### Installing VirtualBox
 
