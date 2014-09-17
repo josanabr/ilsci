@@ -10,12 +10,12 @@ To take full advantage of this document is highly recommended to get access a co
 In order to do this it is necessary install:
 
 - VirtualBox 
-  - [4.2.x 64 bits](http://172.17.9.50/VirtualBox-4.2.24-92790-Linux_amd64.run)
-  - [4.2.x 32 bits](http://172.17.9.50/VirtualBox-4.2.24-92790-Linux_x86.run)
+  - [4.2.x 64 bits](http://172.17.9.50/boxes/VirtualBox-4.2.24-92790-Linux_amd64.run)
+  - [4.2.x 32 bits](http://172.17.9.50/boxes/VirtualBox-4.2.24-92790-Linux_x86.run)
 
 - Vagrant 
-  - [1.6.x 64 bits](http://172.17.9.50/vagrant_1.6.5_x86_64.deb)
-  - [1.6.x 32 bits](http://172.17.9.50/vagrant_1.6.5_i686.deb)
+  - [1.6.x 64 bits](http://172.17.9.50/boxes/vagrant_1.6.5_x86_64.deb)
+  - [1.6.x 32 bits](http://172.17.9.50/boxes/vagrant_1.6.5_i686.deb)
 
 ### Installing VirtualBox
 
@@ -26,7 +26,7 @@ Assuming you are installing VirtualBox in an Ubuntu 64 bits system:
 
 ### Installing Vagrant
 
-Assuming you are installing Vagrant in a Ubuntu 64 bits system, run the following command:
+Assuming you are installing Vagrant in an Ubuntu 64 bits system, run the following command:
 
 ```
 sudo dpkg -i vagrant_1.6.5_x86_64.deb
@@ -108,6 +108,13 @@ The Vagrant sub-command used to create a box given a URL is
 
 ```
 vagrant box add trusy64 https://cloud-images.ubuntu.com/vagrant/trusty/current/trusty-server-cloudimg-amd64-vagrant-disk1.box
+```
+
+A copy of that box is locally available 
+
+
+```
+vagrant box add trusy64 http://172.17.9.50/boxes/trusty-server-cloudimg-amd64-vagrant-disk1.box
 ```
 
 This command downloads a copy of the box file and assigns the `trusty64` name to that box.
