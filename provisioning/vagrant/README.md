@@ -1,7 +1,39 @@
-# Vagrant
+# A gentle intro to Vagrant
 
-**Vagrant** is a tool used to create rapidly virtual machines(VMs) for some virtualization tools such as VirtualBox and VMware. 
-In addition, Vagrant is also able to create VM instances which run in EC2.
+**Author** John A Sanabria
+**E-mail** john.sanabria@correounivalle.edu.co
+
+## Preliminaries
+
+To take full advantage of this document is highly recommended to get access a computer enabled with Vagrant.
+In order to do this it is necessary install:
+
+- VirtualBox 
+..- [4.2.x 64 bits](http://172.17.9.50/VirtualBox-4.2.24-92790-Linux_amd64.run)
+..- [4.2.x 32 bits](http://172.17.9.50/VirtualBox-4.2.24-92790-Linux_x86.run)
+- Vagrant 
+..- [1.6.x 64 bits](http://172.17.9.50/vagrant_1.6.5_x86_64.deb)
+..- [1.6.x 32 bits](http://172.17.9.50/vagrant_1.6.5_i686.deb)
+
+### Installing VirtualBox
+
+Assuming you are installing VirtualBox in a Ubuntu 64 bits system
+
+1. Change permissions of the `.run` file e.g. `chmod +x VirtualBox-4.2.24-92790-Linux_amd64.run`
+2. Run the following command `sudo ./VirtualBox-4.2.24-92790-Linux_amd64.run`
+
+### Installing Vagrant
+
+Assuming you are installing Vagrant in a Ubuntu 64 bits system, run the following command:
+
+```
+sudo dpkg -i vagrant_1.6.5_x86_64.deb
+```
+
+## Introduction
+
+**Vagrant** is a tool used to create rapidly virtual machines(VMs) for some virtualization tools (a.k.a. hypervisors) such as VirtualBox and VMware. 
+In addition, Vagrant is also able to create VM instances to run in EC2.
 
 Vagrant is a CLI tool which provides a set of sub-commands which are used to manage and interact with VMs. 
 You can find more about these sub-commands running the following command.
@@ -112,3 +144,7 @@ To destroy your VM, log out from the VM and run the following command:
 ```
 vagrant destroy
 ```
+
+## Next...
+
+Visit this [document](https://docs.google.com/document/d/10cnPyFyFFKF_fpI9fHjwr6HQEk7vCiPMRtofUQcrHAU/edit?usp=sharing) which will teach you how to customize a Vagrantfile in such a way that multiple VMs exhibiting particular and different characteristics can be defined.
