@@ -107,14 +107,14 @@ There are at least two basic ways to add a box
 The Vagrant sub-command used to create a box given a URL is
 
 ```
-vagrant box add trusy64 https://cloud-images.ubuntu.com/vagrant/trusty/current/trusty-server-cloudimg-amd64-vagrant-disk1.box
+vagrant box add trusty64 https://cloud-images.ubuntu.com/vagrant/trusty/current/trusty-server-cloudimg-amd64-vagrant-disk1.box
 ```
 
 A copy of that box is locally available 
 
 
 ```
-vagrant box add trusy64 http://172.17.9.50/boxes/trusty-server-cloudimg-amd64-vagrant-disk1.box
+vagrant box add trusty64 http://172.17.9.50/boxes/trusty-server-cloudimg-amd64-vagrant-disk1.box
 ```
 
 This command downloads a copy of the box file and assigns the `trusty64` name to that box.
