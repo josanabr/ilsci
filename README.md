@@ -1,3 +1,8 @@
+News, September 17
+==================
+
+Visit the provisioning/vagrant directory for getting a gentle introduction to Vagrant.
+
 News, September 10
 ==================
 
