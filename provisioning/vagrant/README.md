@@ -2,16 +2,19 @@
 
 **Vagrant** is a tool used to create rapidly virtual machines for some virtualization tools such as VirtualBox and VMware. In addition, Vagrant is also able to create virtual machine  (VM) instances which run in EC2.
 
-Vagrant is a CLI tool then it has implemented a set of sub-commands which are used to manage and interact with VMs. 
+Vagrant is a CLI tool which provides a set of sub-commands which are used to manage and interact with VMs. 
 You can find more about these sub-commands running the following command.
 
 >
 > vagrant help
 >
 
-For a basic interaction some sub-commands such as *box*, *init*, *up* and *destroy*; are enough. 
+Vagrant provides a wide range of sub-commands but these  `box`, `init`, `up` and `destroy`; are enough for our instructional purposes. 
 
-How we can create an operational VM in few seconds?
+Now, we will try to answer the following question **How we can create an operational VM in few seconds?**
+
+In order to answer this question is necessary to know about some concepts and sub-commands used by Vagrant. 
+As follows, you will learn about `box`, `init` and `up` sub-commands.
 
 ## Box
 
