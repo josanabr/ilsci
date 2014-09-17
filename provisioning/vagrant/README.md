@@ -1,6 +1,7 @@
 # Vagrant
 
-**Vagrant** is a tool used to create rapidly virtual machines for some virtualization tools such as VirtualBox and VMware. In addition, Vagrant is also able to create virtual machine  (VM) instances which run in EC2.
+**Vagrant** is a tool used to create rapidly virtual machines(VMs) for some virtualization tools such as VirtualBox and VMware. 
+In addition, Vagrant is also able to create VM instances which run in EC2.
 
 Vagrant is a CLI tool which provides a set of sub-commands which are used to manage and interact with VMs. 
 You can find more about these sub-commands running the following command.
@@ -19,36 +20,37 @@ As follows, you will learn about `box`, `init` and `up` sub-commands.
 ## Box
 
 A box is a package format for Vagrant environments. 
-A box is a fundamental piece of the Vagrant tool because it defines the parameters of a VM.
+A box is a fundamental piece of the Vagrant tool because in it is specified the parameters to rule the definition of a VM.
 
-A box file, which is actually a tar file, contains three files
+A box file, which is actually a tar file, contains three files:
 
 - A [virtual] hard disk where the actual operating system resides.
 - An ovf file where a set of basic specifications of a VM is defined.
 - A Vagrantfile.
 
-You can find boxes from web sites such as:
+**Where those boxes can be found?**
+You can find a plethora of boxes from these web sites:
 
 - [https://vagrantcloud.com/](https://vagrantcloud.com/)
 - [https://cloud-images.ubuntu.com/vagrant/](https://cloud-images.ubuntu.com/vagrant/)
 
-If you run this command
+Now, lets see how many boxes are defined in your environment. 
+Then run the following command
 
 ```
 vagrant box list
 ```
 
-
 It is possible that **none** box is listed.
 If your environment has not any box then you **can not** create any VM yet.
-Lets add some box files to your environment.
+Lets add some boxes to your environment.
 
 ### Adding a box
 
 There are at least two basic ways to add a box 
 
-- Using a URL which points to a box 
-- Passing as argument to the `box` command a &lt;username&gt;/&lt;box name&gt;
+- Using a URL which points to a box.
+- Passing as argument to the `box` command a &lt;username&gt;/&lt;box name&gt;.
 
 #### Using a URL
 
