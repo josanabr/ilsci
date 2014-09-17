@@ -6,7 +6,7 @@
 
 ## Preliminaries
 
-To take full advantage of this document is highly recommended to get access a computer enabled with Vagrant.
+To take full advantage of this document is highly recommended to get access a computer with Vagrant installed.
 In order to do this it is necessary install:
 
 - VirtualBox 
@@ -19,9 +19,9 @@ In order to do this it is necessary install:
 
 ### Installing VirtualBox
 
-Assuming you are installing VirtualBox in a Ubuntu 64 bits system
+Assuming you are installing VirtualBox in an Ubuntu 64 bits system:
 
-1. Change permissions of the `.run` file e.g. `chmod +x VirtualBox-4.2.24-92790-Linux_amd64.run`
+1. Change permissions to the `.run` file e.g. `chmod +x VirtualBox-4.2.24-92790-Linux_amd64.run`
 2. Run the following command `sudo ./VirtualBox-4.2.24-92790-Linux_amd64.run`
 
 ### Installing Vagrant
@@ -31,6 +31,22 @@ Assuming you are installing Vagrant in a Ubuntu 64 bits system, run the followin
 ```
 sudo dpkg -i vagrant_1.6.5_x86_64.deb
 ```
+
+### Test Vagrant
+
+Verify if you are ready, run
+
+```
+vagrant version
+```
+
+If you get a message like this
+
+```
+Installed Version: 1.6.3
+```
+
+You are ready to follow with this reading.
 
 ## Introduction
 
