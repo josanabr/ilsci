@@ -64,8 +64,8 @@ This command downloads a copy of the box file and assigns the `trusty64` name to
 
 #### Username/box name
 
-There is a public catalog of [https://vagrantcloud.com/](boxes) which can be used with the vagrant box sub-command.
-When you identify a user (e.g. hashicorp) and a particular box name (e.g. precise64) you can run the Vagrant box subcommand as follows
+There is a public catalog of [https://vagrantcloud.com/](boxes) which can be used with the Vagrant `box` sub-command.
+When you identify a user (e.g. hashicorp) and a particular box name (e.g. precise64) you can run the Vagrant `box` sub-command as follows
 
 ```
 vagrant box add hashicorp/precise64
@@ -74,15 +74,15 @@ vagrant box add hashicorp/precise64
 ## Init
 
 Once you have defined a new box (e.g. trusty64) you are ready to create your first VM using Vagrant. 
-Vagrant needs a text file, named Vagrantfile, which contains the description of the VM to be created. 
-You can create this file by hand or you can use the `init` sub-command.
+Vagrant needs a text file, named `Vagrantfile`, which contains the description of the VM to be created. 
+You can create this file with a text editor or you can use the `init` sub-command.
 Assuming that you have defined a `trusty64` box, you can now create a Vagrantfile as follows
 
 ```
 vagrant init trusty64
 ```
 
-Open the Vagrantfile and identify the line where trusty64 appears.
+Open the Vagrantfile and identify the line where the word `trusty64` appears.
 
 ## Starting UP your first VM
 
@@ -93,14 +93,22 @@ In the same directory where you created the Vagrantfile, run the following comma
 vagrant up
 ```
 
-Open the VirtualBox control panel and watch how a new VM is created and executed.
+Open the VirtualBox control panel and watch how a new VM is created and run.
 
 ## Visiting your VM
 
-When the *vagrant up* command ends, you can log in to the VM as follows
+When the `vagrant up` command ends, you can log in to the VM as follows
 
 ```
 vagrant ssh
 ```
 
 Now, you are in to the VM.
+
+## Destroying your VM
+
+To destroy your VM, log out from the VM and run the following command:
+
+```
+vagrant destroy
+```
