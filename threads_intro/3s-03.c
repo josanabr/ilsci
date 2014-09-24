@@ -48,6 +48,7 @@ void initialize_vector() {
 }
 
 int main(void) {
+	clock_t t1, t2;
 	int i = 0;
 	int err;
 	// random seed
@@ -58,6 +59,7 @@ int main(void) {
 	initialize_vector();
 	printf("Vector initialized!\n");
 	fflush(stdout);
+	t1 = clock();
 	pthread_mutex_init(&mutex,NULL);
 	while (i < MAX_THREADS) {
 		err = pthread_create(&tid[i], NULL, &count3s_thread, (void*)i);
@@ -80,9 +82,11 @@ int main(void) {
 			printf("Thread [%d] exited with status [%ld]\n", i, (long)status);
 		}
 	}
+	pthread_mutex_destroy(&mutex);
+	t2 = clock();
 	printf("Count by threads %d\n", count);
 	printf("Double check %d\n", double_count);
-	pthread_mutex_destroy(&mutex);
+	printf("Elapsed time %f\n", (((float)t2 - (float)t1) / 1000000.0F ) * 1000);
 	pthread_exit(NULL);
 	return 0;
 }

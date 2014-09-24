@@ -35,6 +35,7 @@ void count_3s() {
 }
 
 int main(void) {
+	clock_t t1, t2;
 	int i = 0;
 	int err;
 	// random seed
@@ -45,9 +46,12 @@ int main(void) {
 	initialize_vector();
 	printf("Vector initialized!\n");
 	fflush(stdout);
+	t1 = clock();
 	count_3s();
+	t2 = clock();
 	printf("Count by threads %d\n", count);
 	printf("Double check %d\n", double_count);
+	printf("Elapsed time %f\n", (((float)t2 - (float)t1) / 1000000.0F ) * 1000);
 	return 0;
 }
 
