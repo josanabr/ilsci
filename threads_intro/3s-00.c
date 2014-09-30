@@ -11,6 +11,7 @@ pthread_t tid[MAX_THREADS];
 int *array;
 int count = 0;
 int double_count = 0;
+int max_threads = 0;
 
 
 void initialize_vector() {
@@ -34,13 +35,21 @@ void count_3s() {
 	}
 }
 
-int main(void) {
-	clock_t t1, t2;
+int main(int argc, char* argv[]) {
 	int i = 0;
 	int err;
+	clock_t t1, t2;
+
+	if (argc == 2) {
+		max_threads = atoi(argv[1]);
+	} else {
+		max_threads = MAX_THREADS;
+	}
+	printf("Running 3s-00");
 	// random seed
 	// http://stackoverflow.com/questions/822323/how-to-generate-a-random-number-in-c
 	srand(time(NULL));
+	printf("*** 3s-00 ***\n");
 	printf("Initializing vector... ");
 	fflush(stdout);
 	initialize_vector();
@@ -51,7 +60,9 @@ int main(void) {
 	t2 = clock();
 	printf("Count by threads %d\n", count);
 	printf("Double check %d\n", double_count);
-	printf("Elapsed time %f\n", (((float)t2 - (float)t1) / 1000000.0F ) * 1000);
+	//printf("[[3s-00] Elapsed time %ld ms\n", ((double)t2 - t1) / CLOCKS_PER_SEC * 1000);
+	printf("[[3s-00] Elapsed time %f\n", (((float)t2 - (float)t1) / 1000000.0F ) * 1000);
+	printf("Finishing 3s-00");
 	return 0;
 }
 
