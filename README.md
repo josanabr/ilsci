@@ -2,6 +2,8 @@ News, October 15
 ================
 The provisioning-chef directory has been added. This directory contains two examples about provisioning using Vagrant and Chef. 
 
+In previous lectures we run discussions about Threads. Programs with PThreads and OpenMP are given in the threads_intro directory.
+
 News, September 17
 ==================
 
