@@ -1,3 +1,7 @@
+News, October 15
+================
+The provisioning-chef directory has been added. This directory contains two examples about provisioning using Vagrant and Chef. 
+
 News, September 17
 ==================
 
