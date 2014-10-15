@@ -1,8 +1,3 @@
-execute "update" do
-	user "root"
-	command "apt-get update"
-	action :run
-end
 package "php5 libapache2-mod-php5" do
 	action :install
 end
