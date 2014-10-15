@@ -1,0 +1,12 @@
+#!/bin/bash
+NBODYBIN=nbodypipe
+if [ ! -f <%= @shareddir %>/${NBODYBIN} ]; then
+	make -f Makefile.nbody
+	if [  -f ${NBODYBIN} ]; then
+		cp ${NBODYBIN} <%= @shareddir %>
+	else 
+		echo "File can not be compiled"
+		exit -1
+	fi
+fi
+make -f Makefile.nbody run 

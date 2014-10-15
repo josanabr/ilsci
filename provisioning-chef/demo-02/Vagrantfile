@@ -1,0 +1,131 @@
+Vagrant.configure("2") do |config|
+  config.vm.define :master do |node|
+        node.vm.box = "precise64"
+        node.vm.network :private_network, ip: "10.255.0.2", netmask: "255.255.0.0"
+        node.vm.provider :virtualbox do |vb|
+                vb.customize ["modifyvm", :id, "--name", "master"]
+                vb.customize ["modifyvm", :id, "--cpus", 1]
+        end
+	node.vm.provision "chef_solo" do |chef|
+		chef.cookbooks_path = ["cookbooks", "cookbooks"]
+		chef.add_recipe "hostsfiles"
+		chef.add_recipe "users"
+		chef.add_recipe "aptmirror"
+		chef.add_recipe "nfs"
+		chef.add_recipe "nfs::master"
+		chef.add_recipe "openmpi"
+		chef.add_recipe "openmpi::master"
+		chef.add_recipe "ssh"
+		chef.add_recipe "ssh::master"
+		chef.add_recipe "ganglia"
+		chef.add_recipe "ganglia::master"
+		chef.json = {
+			"hostsfiles" => {
+				"hostname" => "master",
+				"hostmaster" => "master",
+			},
+			"users" => {
+				"username" => "hpuser"
+			},
+			"aptmirror" => {
+				"server" => "192.168.28.102"
+			},
+			"nfs" => {
+				"shareddirectory" => "/shared"
+			},
+			"ganglia" => {
+				"clustername" => "Demo Cluster CPCO7",
+				"hostcollector" => "10.255.0.2",
+				"polltime" => "10",
+				"portcollector" => "8649"
+			}
+		}
+	end
+  end
+  config.vm.define :wn01 do |node|
+        node.vm.box = "precise64"
+        node.vm.network :private_network, ip: "10.255.0.3", netmask: "255.255.0.0"
+        node.vm.provider :virtualbox do |vb|
+                vb.customize ["modifyvm", :id, "--name", "wn01"]
+                vb.customize ["modifyvm", :id, "--cpus", 1]
+                vb.customize ["modifyvm", :id, "--memory", 1024]
+        end
+	node.vm.provision "chef_solo" do |chef|
+		chef.cookbooks_path = ["cookbooks", "cookbooks"]
+		chef.add_recipe "hostsfiles"
+		chef.add_recipe "users"
+		chef.add_recipe "aptmirror"
+		chef.add_recipe "nfs"
+		chef.add_recipe "nfs::client"
+		chef.add_recipe "openmpi"
+		chef.add_recipe "ssh"
+		chef.add_recipe "ssh::client"
+		chef.add_recipe "ganglia"
+		chef.add_recipe "ganglia::node"
+		chef.json = {
+			"hostsfiles" => {
+				"hostname" => "wn01",
+				"hostmaster" => "master",
+			},
+			"users" => {
+				"username" => "hpuser"
+			},
+			"aptmirror" => {
+				"server" => "192.168.28.102"
+			},
+			"nfs" => {
+				"shareddirectory" => "/shared"
+			},
+			"ganglia" => {
+				"clustername" => "Demo Cluster CPCO7",
+				"hostcollector" => "10.255.0.2",
+				"polltime" => "10",
+				"portcollector" => "8649"
+			}
+		}
+	end
+  end
+  config.vm.define :wn02 do |node|
+        node.vm.box = "precise64"
+        node.vm.network :private_network, ip: "10.255.0.4", netmask: "255.255.0.0"
+        node.vm.provider :virtualbox do |vb|
+                vb.customize ["modifyvm", :id, "--name", "wn02"]
+                vb.customize ["modifyvm", :id, "--cpus", 1]
+                vb.customize ["modifyvm", :id, "--memory", 1024]
+        end
+	node.vm.provision "chef_solo" do |chef|
+		chef.cookbooks_path = ["cookbooks", "cookbooks"]
+		chef.add_recipe "hostsfiles"
+		chef.add_recipe "users"
+		chef.add_recipe "aptmirror"
+		chef.add_recipe "nfs"
+		chef.add_recipe "nfs::client"
+		chef.add_recipe "openmpi"
+		chef.add_recipe "ssh"
+		chef.add_recipe "ssh::client"
+		chef.add_recipe "ganglia"
+		chef.add_recipe "ganglia::node"
+		chef.json = {
+			"hostsfiles" => {
+				"hostname" => "wn02",
+				"hostmaster" => "master",
+			},
+			"users" => {
+				"username" => "hpuser"
+			},
+			"aptmirror" => {
+				"server" => "192.168.28.102"
+			},
+			"nfs" => {
+				"shareddirectory" => "/shared"
+			},
+			"ganglia" => {
+				"clustername" => "Demo Cluster CPCO7",
+				"hostcollector" => "10.255.0.2",
+				"polltime" => "10",
+				"portcollector" => "8649"
+			}
+		}
+	end
+  end
+end
