@@ -1,0 +1,9 @@
+Universe = vanilla
+should_transfer_files = Yes
+when_to_transfer_output = ON_EXIT_OR_EVICT
+Executable = script.sh
+Arguments = 5
+Log = submit_02Log.txt
+Output = submit_02Out.txt
+Error = submit_02Err.txt
+Queue

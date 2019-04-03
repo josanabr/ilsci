@@ -1,0 +1,10 @@
+Universe = vanilla
+should_transfer_files = Yes
+transfer_input_files = submit_01Out.0.txt, submit_02Out.0.txt, submit_04Out.0.txt
+when_to_transfer_output = ON_EXIT_OR_EVICT
+Executable = /bin/cat
+Arguments = submit_01Out.0.txt submit_02Out.0.txt submit_04Out.0.txt
+Log = submit_06Log.txt
+Output = submit_06Out.txt
+Error = submit_06Err.txt
+Queue

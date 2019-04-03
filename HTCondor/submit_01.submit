@@ -1,0 +1,8 @@
+Universe = vanilla
+when_to_transfer_output = ON_EXIT_OR_EVICT
+transfer_executable = False
+Executable = /bin/hostname
+Log = submit_01Log.txt
+Output = submit_01Out.txt
+Error = submit_01Err.txt
+Queue

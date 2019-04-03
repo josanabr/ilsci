@@ -1,0 +1,9 @@
+Universe = vanilla
+should_transfer_files = Yes
+when_to_transfer_output = ON_EXIT_OR_EVICT
+Executable = hola
+Arguments = john
+Log = submit_04Log.txt
+Output = submit_04Out.txt
+Error = submit_04Err.txt
+Queue
